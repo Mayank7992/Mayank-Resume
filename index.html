@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(7, 7, 59);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 87);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(52 48 234);
+            /* font-size: 1.07rem; */
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 55px -42px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 40px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftsection {
+            font-size: 1.5rem;
+        }
+
+        .leftsection .btn {
+            font-size: 19px;
+            background: #1e2167;
+            padding: 20px;
+            color: white;
+            border: 2px solid white;
+            border-radius: 34px;
+            cursor: pointer;
+        }
+
+        .leftsection .buttons {
+            padding: 23px;
+        }
+
+        .rightsection img {
+            width: 80%;
+            margin: 38px 0;
+        }
+
+        .purple {
+            color: rgb(140, 74, 202);
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(140, 74, 202);
+        }
+
+        .secondSection {
+            max-width: 92vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.7rem;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 95vw;
+            height: 2px;
+            margin: 50px -21px;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            height: 32px;
+            width: 1px;
+            background-color: white;
+            margin: 0 8vw;
+        }
+
+        .image-top {
+            width: 67px;
+            position: relative;
+            top: -48px;
+            left: -26px;
+        }
+
+        .image-top1 {
+            width: 57px;
+            position: relative;
+            top: -60px;
+            left: -28px;
+        }
+
+        .image-top2 {
+            width: 57px;
+            position: relative;
+            top: -38px;
+            left: -28px;
+        }
+
+        .image-top3 {
+            width: 57px;
+            position: relative;
+            top: -53px;
+            left: -28px;
+        }
+
+        .image-top4 {
+            width: 42px;
+            position: relative;
+            top: -52px;
+            left: -21px;
+        }
+
+        .image-top5 {
+            width: 42px;
+            position: relative;
+            top: -37px;
+            left: -21px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: -17px;
+            width: 150px;
+            left: -23px;
+        }
+
+        .vertical-title1 {
+            position: relative;
+            top: -32px;
+            width: 150px;
+            left: -23px;
+        }
+
+        .vertical-title3 {
+            position: relative;
+            top: -25px;
+            width: 150px;
+            left: -23px;
+        }
+
+        .vertical-title4 {
+            position: relative;
+            top: -25px;
+            width: 150px;
+            left: -23px;
+        }
+
+        .vertical-title a {
+            position: relative;
+            top: 10px;
+            width: 150px;
+            left: -12px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .vertical-title2 a {
+            position: relative;
+            top: -32px;
+            left: -26px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .vertical-title4 a {
+            position: relative;
+            top: 21px;
+            left: -4px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: -15px;
+            color: #7475a4;
+            left: -18px;
+            width: 160px;
+            font-size: 11px;
+        }
+
+        .vertical-desc1 {
+            position: relative;
+            top: -30px;
+            color: #7475a4;
+            left: -18px;
+            width: 160px;
+            font-size: 11px;
+        }
+
+        .vertical-desc2 {
+            position: relative;
+            top: 15px;
+            color: #7475a4;
+            left: -29px;
+            width: 160px;
+            font-size: 11px;
+        }
+
+        .vertical-desc3 {
+            position: relative;
+            top: -12px;
+            color: #7475a4;
+            left: -29px;
+            width: 160px;
+            font-size: 11px;
+        }
+
+        .vertical-desc4 {
+            position: relative;
+            top: -4px;
+            color: #7475a4;
+            left: -29px;
+            width: 160px;
+            font-size: 11px;
+        }
+
+        .vertical-desc5 {
+            position: relative;
+            top: 38px;
+            color: #7475a4;
+            left: -29px;
+            width: 160px;
+            font-size: 11px;
+        }
+
+        footer {
+            background-color: #1f1f3d;
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 100px;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 268px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            body {
+                /* background-color: red; */
+            }
+
+            .box {
+                flex-direction: column;
+            }
+
+            .secondSection .vertical {
+                height: unset;
+            }
+
+            .vertical-title,
+            .vertical-title1,
+            .vertical-title2 a,
+            .vertical-title3,
+            .vertical-title4,
+            .vertical-desc,
+            .vertical-desc1,
+            .vertical-desc2,
+            .vertical-desc3,
+            .vertical-desc4,
+            .vertical-desc5 {
+                left: 45px;
+            }
+
+            .secondSection .box {
+                width: 50vw;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            .firstSection {
+                flex-direction: column-reverse;
+            }
+
+            .leftsection {
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .rightsection {
+                width: 650px !important;
+                display: flex;
+                justify-content: center;
+            }
+
+            .rightsection img {
+                width: 46vw;
+                margin-bottom: 84px;
+            }
+
+            .secondSection {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 215vh;
+            }
+
+            body {
+                min-width: fit-content;
+            }
+
+            .image-top {
+                width: 67px;
+                position: relative;
+                top: 30px;
+                left: -37px;
+            }
+
+            .image-top1 {
+                width: 57px;
+                position: relative;
+                top: 25px;
+                left: -29px;
+            }
+
+            .image-top2 {
+                width: 57px;
+                position: relative;
+                top: 32px;
+                left: -34px;
+            }
+
+            .image-top3 {
+                width: 57px;
+                position: relative;
+                top: 21px;
+                left: -28px;
+            }
+
+            .image-top4 {
+                width: 42px;
+                position: relative;
+                top: 23px;
+                left: -20px;
+            }
+
+            .image-top5 {
+                width: 42px;
+                position: relative;
+                top: 29px;
+                left: -19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Mayank's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</li></a>
+                    <li><a href="/">About</li></a>
+                    <li><a href="/">Certificates</li></a>
+                    <li><a href="/">Projects</li></a>
+                    <li><a href="/">Contact Me</li></a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftsection">
+                <div>Hi,My name is <span class="purple">Mayank Kumar</span></div>
+                <div>I am a Passionate <br></div>
+                <span id="element"></span>
+                <br>
+                <br>
+                <button class="btn">Download Button</button>
+                <button class="btn">Visit Github</button>
+            </div>
+            <div class="rightsection">
+                <img src="bg.png" alt="">
+            </div>
+        </section>
+        <section class="secondSection">
+            <hr>
+            <span class="text-gray">What I have done so far</span>
+            <h1>Work Experience</h1>
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="ag.jpg" alt="">
+                    <div class="vertical-title">
+                        HTML Developer(2020-2022)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit iure commodi ullam hic
+                        voluptatum molestiae consequuntur vel?
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top1" src="cg.png" alt="">
+                    <div class="vertical-title1">
+                        Frontend Developer(2021-Now)
+                    </div>
+                    <div class="vertical-desc1">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit iure commodi ullam hic
+                        voluptatum molestiae consequuntur vel?
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top2" src="dg.png" alt="">
+                    <div class="vertical-title">
+                        <a href="https://www.codingninjas.com/studio/profile/Mayank7" target="_blank">CodeStudio Profile
+                            (Link)</a>
+                    </div>
+                    <div class="vertical-desc2">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit isure commodi ullam hic
+                        voluptatum molestiae consequuntur vel?
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top3" src="eg.png" alt="">
+                    <div class="vertical-title2">
+                        <a href="https://leetcode.com/Mayank_799/" target="_blank">Leetcode Profile(Link)</a>
+                    </div>
+                    <div class="vertical-desc3">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit iure commodi ullam hic
+                        voluptatum molestiae consequuntur vel?
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top4" src="fg.png" alt="">
+                    <div class="vertical-title3">
+                        C++ Coder(2020-Now)
+                    </div>
+                    <div class="vertical-desc4">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit iure commodi ullam hic
+                        voluptatum molestiae consequuntur vel?
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top5" src="gg.png" alt="">
+                    <div class="vertical-title4">
+                        <a href="https://www.linkedin.com/in/mayank-kumar-569450230/" target="_blank">Linkedin
+                            Profile</a>
+                    </div>
+                    <div class="vertical-desc5">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit iure commodi ullam hic
+                        voluptatum molestiae consequuntur vel?
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="first-footer">
+                <h3>Mayank's Develeoper Portfolio</h3>
+            </div>
+            <div class="second-footer">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Services</li>
+                </ul>
+            </div>
+            <div class="third-footer">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Services</li>
+                </ul>
+            </div>
+            <div class="fourth-footer">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Services</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; www.mayanksportfolio.com | All rights reserved
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Software Engineer', 'Web Designer', 'Coder', 'Web Developer'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
